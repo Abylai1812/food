@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food</title>
+</head>
+<body>
+    <svg display="none">
+        <symbol id="next" viewBox="0 0 512.002 512.002">
+            <g>
+                <path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+                    L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+                    l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z"/>
+            </g>
+        </symbol>
+        <symbol id="facebook" viewBox="0 0 155.139 155.139">
+            <g>
+                <path id="f_1_" style="fill:#010002;" d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184
+                    c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452
+                    v20.341H37.29v27.585h23.814v70.761H89.584z"/>
+            </g>
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 512 512">
+            <g>
+                <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+	c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+	c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+	c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+	c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+	c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+	C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+	C480.224,136.96,497.728,118.496,512,97.248z"/>
+            </g>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 512 512">
+            <g>
+                <path d="m305 256c0 27.0625-21.9375 49-49 49s-49-21.9375-49-49 21.9375-49 49-49 49 21.9375 49 49zm0 0"/><path d="m370.59375 169.304688c-2.355469-6.382813-6.113281-12.160157-10.996094-16.902344-4.742187-4.882813-10.515625-8.640625-16.902344-10.996094-5.179687-2.011719-12.960937-4.40625-27.292968-5.058594-15.503906-.707031-20.152344-.859375-59.402344-.859375-39.253906 0-43.902344.148438-59.402344.855469-14.332031.65625-22.117187 3.050781-27.292968 5.0625-6.386719 2.355469-12.164063 6.113281-16.902344 10.996094-4.882813 4.742187-8.640625 10.515625-11 16.902344-2.011719 5.179687-4.40625 12.964843-5.058594 27.296874-.707031 15.5-.859375 20.148438-.859375 59.402344 0 39.25.152344 43.898438.859375 59.402344.652344 14.332031 3.046875 22.113281 5.058594 27.292969 2.359375 6.386719 6.113281 12.160156 10.996094 16.902343 4.742187 4.882813 10.515624 8.640626 16.902343 10.996094 5.179688 2.015625 12.964844 4.410156 27.296875 5.0625 15.5.707032 20.144532.855469 59.398438.855469 39.257812 0 43.90625-.148437 59.402344-.855469 14.332031-.652344 22.117187-3.046875 27.296874-5.0625 12.820313-4.945312 22.953126-15.078125 27.898438-27.898437 2.011719-5.179688 4.40625-12.960938 5.0625-27.292969.707031-15.503906.855469-20.152344.855469-59.402344 0-39.253906-.148438-43.902344-.855469-59.402344-.652344-14.332031-3.046875-22.117187-5.0625-27.296874zm-114.59375 162.179687c-41.691406 0-75.488281-33.792969-75.488281-75.484375s33.796875-75.484375 75.488281-75.484375c41.6875 0 75.484375 33.792969 75.484375 75.484375s-33.796875 75.484375-75.484375 75.484375zm78.46875-136.3125c-9.742188 0-17.640625-7.898437-17.640625-17.640625s7.898437-17.640625 17.640625-17.640625 17.640625 7.898437 17.640625 17.640625c-.003906 9.742188-7.898437 17.640625-17.640625 17.640625zm0 0"/><path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm146.113281 316.605469c-.710937 15.648437-3.199219 26.332031-6.832031 35.683593-7.636719 19.746094-23.246094 35.355469-42.992188 42.992188-9.347656 3.632812-20.035156 6.117188-35.679687 6.832031-15.675781.714844-20.683594.886719-60.605469.886719-39.925781 0-44.929687-.171875-60.609375-.886719-15.644531-.714843-26.332031-3.199219-35.679687-6.832031-9.8125-3.691406-18.695313-9.476562-26.039063-16.957031-7.476562-7.339844-13.261719-16.226563-16.953125-26.035157-3.632812-9.347656-6.121094-20.035156-6.832031-35.679687-.722656-15.679687-.890625-20.6875-.890625-60.609375s.167969-44.929688.886719-60.605469c.710937-15.648437 3.195312-26.332031 6.828125-35.683593 3.691406-9.808594 9.480468-18.695313 16.960937-26.035157 7.339844-7.480469 16.226563-13.265625 26.035157-16.957031 9.351562-3.632812 20.035156-6.117188 35.683593-6.832031 15.675781-.714844 20.683594-.886719 60.605469-.886719s44.929688.171875 60.605469.890625c15.648437.710937 26.332031 3.195313 35.683593 6.824219 9.808594 3.691406 18.695313 9.480468 26.039063 16.960937 7.476563 7.34375 13.265625 16.226563 16.953125 26.035157 3.636719 9.351562 6.121094 20.035156 6.835938 35.683593.714843 15.675781.882812 20.683594.882812 60.605469s-.167969 44.929688-.886719 60.605469zm0 0"/>
+            </g>
+        </symbol>
+        <symbol id="close"  viewBox="0 0 496.096 496.096">
+            <g>
+                <path d="M259.41,247.998L493.754,13.654c3.123-3.124,3.123-8.188,0-11.312c-3.124-3.123-8.188-3.123-11.312,0L248.098,236.686
+                    L13.754,2.342C10.576-0.727,5.512-0.639,2.442,2.539c-2.994,3.1-2.994,8.015,0,11.115l234.344,234.344L2.442,482.342
+                    c-3.178,3.07-3.266,8.134-0.196,11.312s8.134,3.266,11.312,0.196c0.067-0.064,0.132-0.13,0.196-0.196L248.098,259.31
+                    l234.344,234.344c3.178,3.07,8.242,2.982,11.312-0.196c2.995-3.1,2.995-8.016,0-11.116L259.41,247.998z"/>
+            </g>
+        </symbol>
+    </svg>
+
+    <!---Header-->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <nav class="nav">
+                    <a  data-nav=".features" href="#" class="nav__link">О нас</a>
+                    <a  data-nav=".reviews" href="#" class="nav__link">Отзывы</a>
+                    <a  data-nav=".calculating"href="#" class="nav__link">Меню</a>
+                    <a  data-nav=".footer" href="#" class="nav__link">Контакты</a>
+                </nav>
+                <a href="#" class="header__logo">
+                    <img src="img/logo-planet.png" alt="">
+                </a>
+                <button data-modal class="btn">Связаться с нами</button>
+            </div>
+        </div>
+    </header>
+
+    <!---Intro-->
+    <main class="main">
+        <div class="container">
+            <div class="intro">
+                <h2 class="header__title intro__title">Полезная, сытная и правильная еда</h2>
+                <h4 class="intro__text">Что мы можем вам предложить? Наша основная идея - это правильное питание. Оно может быть простым и вкусным. Мы не просто доставка, мы сервис! Мы взяли на себя все расчеты БЖУ, калорийности, объемов порций и прочие важные, но скучные аспекты. Вам остается только полезная, сытная и правильная еда, которую мы привозим прямо под дверь.</h4>
+      
+                <div class="intro__inner">
+                    <div class="tabcontainer">
+                        <div class="tabcontent">
+                            <img class="tabcontent__img" src="img/tabs/fitness.jpg" alt="">  
+                            <h4 class="tabcontent__descr">Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Для людей, которые интересуются спортом; активных и здоровых. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!</h4> 
+                        </div>
+                        <div class="tabcontent">
+                            <img class="tabcontent__img" src="img/tabs/elite.jpg" alt="">  
+                            <h4 class="tabcontent__descr">Меню “Премиум” - мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!</h4> 
+                        </div>
+                        <div class="tabcontent">
+                            <img class="tabcontent__img" src="img/tabs/post.jpg" alt="">  
+                            <h4 class="tabcontent__descr">Наше специальное “Постное меню” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения. Полная гармония с собой и природой в каждом элементе! Все будет Ом!</h4> 
+                        </div>
+                        <div class="tabcontent">
+                            <img class="tabcontent__img" src="img/tabs/vegy.jpg" alt="">  
+                            <h4 class="tabcontent__descr">Меню "Сбалансированное" - это соответствие вашего рациона всем научным рекомендациям. Мы тщательно просчитываем вашу потребность в к/б/ж/у и создаем лучшие блюда для вас.</h4> 
+                        </div> 
+
+                        <div class="tabheader">
+                            <h3>Выберите стиль питания</h3>
+                            <div class="tabheader__items">
+                                <div class="tabheader__item .tabheader__item_active">Фитнес</div>
+                                <div class="tabheader__item">Премиум</div>
+                                <div class="tabheader__item">Постное</div>
+                                <div class="tabheader__item">Сбалансированное</div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+    <!---Features--> 
+
+    <div class="features">
+        <div class="container">
+            <h3 class="header__title">Почему мы?</h3>
+            <h5 class="features__subtitle">Правильное питание – основа красоты, хорошего самочувствия и бодрости.Мы существуем на рынке здорового питания с 2014 года. За это время успели разработать свыше 500 рецептов блюд,100 ПП десертов.</h5>
+        <div class="features__inner">
+            <div class="features__items">
+                <div class="features__item">
+                    <h4 class="features__item-title">Быстро и полезно</h4>
+                    <h5 class="features__item-text">Мы привозим еду сразу на целый день, и ты можешь действовать так, как тебе удобно, не подстраиваясь ни под кого и будучи уверенным в качестве продукта!</h5>
+                    <img class="features__icon" src="img/icons/1.png" alt="">  
+                </div>
+                <div class="features__item">
+                    <h4 class="features__item-title">Правильный рацион</h4>
+                    <h5 class="features__item-text">Мы разработали специальное меню, где учтены все нюансы правильного питания, от баланса БЖУ до их приготовления и дробления рациона.</h5>
+                    <img class="features__icon" src="img/icons/2.png" alt="">  
+                </div>
+                <div class="features__item">
+                    <h4 class="features__item-title">Экономить личное время</h4>
+                    <h5 class="features__item-text">Здоровая еда может быть вкусной, а правильный образ жизни − приносить удовольствие. И для этого не нужно все время считать калории и тратить много личного времени. Мы обо всем позаботились.</h5>
+                    <img class="features__icon" src="img/icons/clock.png" alt="">  
+                </div>
+            </div>
+            <img class="features__img" src="img/features.jpg" alt="">
+        </div>
+        </div>
+    </div> 
+    
+    <!---Calculating-->
+    <div class="calculating">
+        <div class="container">
+            <h2 class="calc__title">Рассчитаем вашу потребность в калориях?
+            </h2>
+            <div class="calculating__field">
+                <div class="calculating__subtitle">
+                    Ваш пол
+                </div>
+                <div class="calculating__choose" id="gender">
+                    <div id="female" class="calculating__choose-item calculating__choose-item_active">Женщина</div>
+                    <div id="male" class="calculating__choose-item">Мужчина</div>
+                </div>
+
+                <div class="calculating__subtitle">
+                    Ваша конституция
+                </div>
+                <div class="calculating__choose calculating__choose_medium">
+                    <input type="text" id="height" placeholder="Введите рост" class="calculating__choose-item">
+                    <input type="text" id="weight" placeholder="Введите вес"  class="calculating__choose-item">
+                    <input type="text" id="age" placeholder="Введите возраст" class="calculating__choose-item">
+                </div>
+
+                <div class="calculating__subtitle">
+                    Выберите вашу физическая активность
+                </div>
+                <div class="calculating__choose calculating__choose_big">
+                    <div data-ratio="1.2" id="low" class="calculating__choose-item">Низкая активность </div>
+                    <div data-ratio="1.375" id="small"  class="calculating__choose-item calculating__choose-item_active">Невысокая активность</div>
+                    <div data-ratio="1.55" id="medium" class="calculating__choose-item">Умеренная активность</div>
+                    <div data-ratio="1.725" id="high" class="calculating__choose-item">Высокая активность</div>
+                </div>
+
+                <div class="calculating__divider"></div>
+
+                <div class="calculating__total">
+                    <div class="calculating__subtitle">
+                        Ваша суточная норма калорий:
+                    </div>
+                    <div class="calculating__result">
+                        <span>2700</span> ккал
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---Reviews-->
+    <div class="reviews">
+        <div class="container">
+            <h2 class="header__title reviews__title">Что о нас говорят наши клиенты</h2>
+            <div class="reviews__slider">
+                <div class="reviews__slider-wrapper">
+                    <div class="reviews__slider-inner">
+                        <div class="reviews__slide">
+                            <h3 class="reviews__text">Здравствуйте, спасибо Вам за ваш сервис, готовить не люблю и лень заморачиваться, Вы очень помогаете. Много блюд нравится и то что всегда свежее и овощи не разваренные - это супер. Пробовала у Вас еще программу вегги, но так как там исключаются и молочные и яйца - это жестковато, было бы круто иметь программу с мясом.</h3>
+                            <img class="reviews__photo" src="img/reviews/1.jpg" alt="">
+                            <div class="reviews__author">Ахмет Исаков</div>
+                        </div>
+                        <div class="reviews__slide">
+                            <h3 class="reviews__text">Я редко пишу отзывы. Но в этот раз мне особенно захотелось написать, потому что очень довольна в целом всей работой команды. Во первых, девочки очень подробно и с душой консультируют, проникаясь во все детали. Я была приятно удивлена, что программу подобрали, учитывая мой возраст, образ жизни и физ параметры.</h3>
+                            <img class="reviews__photo" src="img/reviews/2.png" alt="">
+                            <div class="reviews__author">Татьяна Иванова </div>
+                        </div>
+                        <div class="reviews__slide">
+                            <h3 class="reviews__text">Замечательный сервис по доставке правильного питания! Приятные и отзывчивые менеджеры, пунктуальные и вежливые курьеры, а повара - просто профессионалы в своем деле. Все было безумно вкусно. Хочу выразить вам свою благодарность за свои результаты: минус 5 кг за 21 день на программе 1200 ккал. Обязательно к вам вернусь!</h3>
+                            <img class="reviews__photo" src="img/reviews/3.png" alt="">
+                            <div class="reviews__author">Данияр Тарасов</div>
+                        </div>
+                        <div class="reviews__slide">
+                            <h3 class="reviews__text">Пользовалась таким сервисом впервые и осталась очень довольна! Поначалу казалось очень сомнительным оплачивать стоимость всей программы сразу, но потом я поняла что сделала это не напрасно!Спасибо вам ребята за аккуратное оформление и эко посуду, вкусную кухню и отзывчивый персонал.</h3>
+                            <img class="reviews__photo" src="img/reviews/4.png" alt="">
+                            <div class="reviews__author">Дана Сергеевна</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews__slider-counter">
+                    <div class="reviews__slider-arrow prev__arrow">
+                        <svg class="arrow__icon prev__arrow-icon">
+                            <use  xlink:href="#next"></use>
+                        </svg>
+                    </div>
+                    <div class="reviews__slider-arrow next__arrow">
+                        <svg class="arrow__icon">
+                            <use  xlink:href="#next"></use>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <!--Promotion--->
+    <div class="promotion">
+        <div class="bgc_y"></div>
+        <div class="container">
+            <div class="promotion__text">
+                <div class="header__title promotion__title">Акция для новых клиентов!</div>
+                <div class="promotion__descr">
+                    Мы ценим каждого клиента и предлагаем вам стать одним из них на очень выгодных условиях. 
+                    Каждому, кто закажет доставку питание на неделю, будет предоставлена скидка в размере <span>20%!</span>
+                    <br><br>
+                    Акция закончится 30 августа в 00:00
+                </div>
+            </div>
+            <div class="promotion__timer">
+                <div class="header__title timer__title">Осталось до конца акции:</div>
+                <div class="timer">
+                    <div class="timer__block">
+                        <span id="days">26</span>
+                        дней
+                    </div>
+                    <div class="timer__block">
+                        <span id="hours">20</span>
+                        часов
+                    </div>
+                    <div class="timer__block">
+                        <span id="minutes">56</span>
+                        минут
+                    </div>
+                    <div class="timer__block">
+                        <span id="seconds">20</span>
+                        секунд
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--Footer--->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__block">
+                <img src="img/logo-planet.png" alt="">
+                <div class="footer__text">Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.</div>
+            </div>
+            <div class="footer__block">
+                <div class="footer__block-inner">
+                <div class="footer__nav">
+                    <div class="footer__nav-link">О нас</div>
+                    <div class="footer__nav-link">Сервис</div>
+                    <div class="footer__nav-link">Меню</div>
+                </div>
+                <div class="footer__nav">
+                    <div class="footer__nav-link">Отзывы</div>
+                    <div class="footer__nav-link">Блог</div>
+                    <div class="footer__nav-link">Акция</div>
+                </div>
+            </div>
+            </div>
+            <div class="footer__block">
+                <div class="social__title">Контакты</div>
+                <a class="social__email" type="email" href="">Email:oyasim@email.com</a>
+                <div class="social">
+                    <svg class="social__link">
+                        <use  xlink:href="#facebook"></use>
+                    </svg>
+                    <svg class="social__link">
+                        <use  xlink:href="#twitter"></use>
+                    </svg>
+                    <svg class="social__link">
+                        <use  xlink:href="#instagram"></use>
+                    </svg>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal">
+    <div class="modal__dialog">
+      <div class="modal__content">
+       <button data-close class="modal__close" type="button">
+           <svg class="modal__close-icon">
+                   <use xlink:href="#close"></use>
+           </svg>
+       </button>
+        <h4 class="modal__text">Мы свяжемся с вами в ближайшее время!</h4>
+        <form action="" method="post">
+            <div class="form__group">
+                <input class="input" type="text" name="text" placeholder="Ваше имя и фамилия">
+            </div>
+            <div class="form__group">
+                <input class="input" type="email" name="email" placeholder="Ваш e-mail">
+            </div>
+            <div class="form__group">
+                <input class="input" type="tel" name="phone" placeholder="Ваш номер телефона">
+            </div>
+            <button  class="btn modal__btn" type="submit">Перезвонить мне</button>
+           
+   </form>
+    </div>    
+</div>
+</div>
+    
+ <script src="app.js"></script>   
+</body>
+</html>
